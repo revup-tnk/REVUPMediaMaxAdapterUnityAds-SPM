@@ -1,12 +1,21 @@
 {
   "pins" : [
     {
-      "identity" : "applovin-max-swift-package",
+      "identity" : "unity-ad-quality-swift-package",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/AppLovin/AppLovin-MAX-Swift-Package.git",
+      "location" : "https://github.com/ironsource-mobile/Unity-Ad-Quality-Swift-Package",
       "state" : {
-        "revision" : "b5acf713209298059bb2f09b22d84d523454bc7b",
-        "version" : "13.5.1"
+        "revision" : "c53701a5f2c77cc440b3f0622a5e1733fd9d08d5",
+        "version" : "9.7.0"
+      }
+    },
+    {
+      "identity" : "unity-ads-swift-package",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Unity-Technologies/Unity-Ads-Swift-Package.git",
+      "state" : {
+        "revision" : "15e46d4d96b941eb0bc9ae8b9d97574b29618f4d",
+        "version" : "4.19.0"
       }
     }
   ],

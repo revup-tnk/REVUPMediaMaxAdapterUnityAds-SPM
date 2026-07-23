@@ -13,33 +13,27 @@ let package = Package(
         ),
     ],
     dependencies: [
-        .package(url: "https://github.com/AppLovin/AppLovin-MAX-Swift-Package.git", exact: "13.5.1"),
+        .package(url: "https://github.com/Unity-Technologies/Unity-Ads-Swift-Package.git", exact: "4.19.0"),
     ],
     targets: [
         .target(
             name: "REVUPMediaMaxAdapterUnityAdsTarget",
             dependencies: [
                 .target(name: "REVUPMediaMaxAdapterUnityAds"),
-                .target(name: "REVUPMediaMaxAdapterUnityAdsMediationAdapter"),
-                .target(name: "UnityAds"),
-                .product(name: "AppLovinSDK", package: "AppLovin-MAX-Swift-Package"),
+                .target(name: "AppLovinMediationUnityAdsAdapter"),
+                .product(name: "UnityAds", package: "Unity-Ads-Swift-Package"),
             ],
-            path: "Sources"
+            path: "Sources",
         ),
         .binaryTarget(
             name: "REVUPMediaMaxAdapterUnityAds",
-            url: "https://github.com/revup-tnk/REVUP-iOS-SDK/releases/download/1.0.0/REVUPMediaMaxAdapterUnityAds.zip",
-            checksum: "e80c3d06cbf7e67d2a39402e3ccecd8af5dfa6efab18a6b2b9ae2fc42dd86623"
+            url: "https://github.com/revup-tnk/REVUP-iOS-SDK/releases/download/1.1.0/REVUPMediaMaxAdapterUnityAds.zip",
+            checksum: "5945a9d4bf624b18187d5d4960fc8ce328ad460bcd4f8be7c28499ada045a05f"
         ),
         .binaryTarget(
-            name: "REVUPMediaMaxAdapterUnityAdsMediationAdapter",
-            url: "https://github.com/revup-tnk/REVUP-iOS-SDK/releases/download/1.0.0/AppLovinMediationUnityAdsAdapter.xcframework.zip",
-            checksum: "29e110e685d5fc8c11ed83d810bc25bea4b59d771446e50ef9a806f5a9e2837f"
-        ),
-        .binaryTarget(
-            name: "UnityAds",
-            url: "https://github.com/revup-tnk/REVUP-iOS-SDK/releases/download/1.0.0/UnityAds.xcframework.zip",
-            checksum: "5782f94d48fa7d1fa88182247f687833015a1aada1d7d5ceb88356fe5c8b047d"
-        ),
+            name: "AppLovinMediationUnityAdsAdapter",
+            url: "https://artifacts.applovin.com/ios/com/applovin/mediation/unityads-adapter/AppLovinMediationUnityAdsAdapter-4.19.0.0.zip",
+            checksum: "8f22ef200a10cb4cae5ed354f67a4185287202158f21946c019616b70eddd0bb"
+        )
     ]
 )
